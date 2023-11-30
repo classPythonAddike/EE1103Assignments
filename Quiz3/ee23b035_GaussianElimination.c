@@ -39,7 +39,7 @@ int main(int argc, char** argv) {
     normalise_coefficients();
     solve();
 
-        for (int i = 0; i < N; i++) {
+    for (int i = 0; i < N; i++) {
         printf("%f ", solutions[i]);
     }
     printf("\n");
@@ -161,8 +161,6 @@ void solve() {
             fprintf(stderr, "This system of equations cannot be solved!\n");
             exit(STATUS_ERROR);
         }
-
-        
 
         solutions[var] = matrix_multiplication / coefficients[var * (N + 1) + var];
     }

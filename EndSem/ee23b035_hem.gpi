@@ -1,0 +1,18 @@
+
+set title "Hemachandra Series";
+
+set grid;
+
+set xlabel 'i';
+set ylabel 'i-th value' tc "dark-orange";
+set y2label 'ratio' tc "web-blue";
+
+set ytics nomirror tc rgb "dark-orange";
+set y2tics 0.05 tc rgb "web-blue";
+
+plot 'ee23b035_hem.txt' using 1:2 with linespoints pt 7 lt rgb "dark-orange" title "i-th value vs i", 'ee23b035_hem.txt' using (lastx=$1):(lasty=$3) with linespoints pt 7 lt rgb "web-blue" title "ratio vs i" axes x1y2;
+
+set arrow from second 2,lasty to second lastx,lasty nohead lw 1 lc "web-blue" dt 2;
+set label sprintf("%.3f", lasty*1.0) at second lastx,lasty offset 1, 0 tc "web-blue";
+
+pause mouse close;

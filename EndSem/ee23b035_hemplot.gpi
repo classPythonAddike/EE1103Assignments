@@ -1,0 +1,4 @@
+set title 'Hemachandra Spiral';
+
+plot 'ee23b035_hemplot.dat' with lines lw 2 lc 'web-blue' title columnheader(1);
+pause mouse close;

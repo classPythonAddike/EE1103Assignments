@@ -1,0 +1,9 @@
+set title "Switching Time Estimation vs Dampening Constant Alpha - RK45";
+
+set xlabel 'x';
+set ylabel 'y';
+
+plot 'rk45_tau.dat' w lines lw 2 title "Tau vs Alpha";
+set grid;
+
+pause mouse close;

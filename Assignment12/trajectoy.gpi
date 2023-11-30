@@ -1,0 +1,11 @@
+set title "Differential Equations Estimation - Euler, Heun and RK45";
+
+set size ratio -1;
+
+set xlabel 'x';
+set ylabel 'y';
+set zlabel 'z';
+
+splot for [IDX=0:2] 'data.dat' i IDX u 1:2:3 w lines lw 2 title columnheader(1);
+
+pause mouse close;
